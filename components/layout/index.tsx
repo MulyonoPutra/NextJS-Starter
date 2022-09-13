@@ -9,20 +9,20 @@ interface LayoutProps {
 }
 
 const Layout = (props: LayoutProps) => {
-  const { children, pageTitle } = props;
-  return (
-    <>
-      <Head>
-        <title>Next JS Basic | {pageTitle}</title>
-        <meta name="description" content="NextJS basic" />
-      </Head>
-      <div>
-        <Header />
-        <div>{children}</div>
-        <Footer />
-      </div>
-    </>
-  );
+	const { children, pageTitle } = props;
+	return (
+		<>
+			<Head>
+				<title>Next JS Basic | {pageTitle}</title>
+				<meta name="description" content="NextJS basic" />
+			</Head>
+			<div>
+				<Header />
+				<div>{children}</div>
+				<Footer />
+			</div>
+		</>
+	);
 };
 
 export default Layout;

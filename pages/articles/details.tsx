@@ -1,9 +1,7 @@
-import React from 'react'
-
 const ArticleDetails = () => {
-  return (
-    <div>ArticleDetails</div>
-  )
-}
+	return (
+		<div>ArticleDetails</div>
+	);
+};
 
-export default ArticleDetails
+export default ArticleDetails;
