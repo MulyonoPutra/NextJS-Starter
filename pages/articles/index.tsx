@@ -18,7 +18,7 @@ export default function Articles({data}: ArticleProps) {
 				{
 					data.map((article) => {
 						return (
-							<div className={styles.flexWrapper} key={data.id}>
+							<div className={styles.flexWrapper} key={article.id}>
 								<div key={article.id} className={styles.card}>
 									<h5 className={styles.title}>{article.title}</h5>
 									<p className={styles.content}>{article.body}</p>
