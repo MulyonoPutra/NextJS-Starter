@@ -3,8 +3,6 @@ import { useRouter } from 'next/router';
 import styles from '../../styles/User.module.css';
 import { IUser } from '../../interface/user.interface';
 
-
-
 interface UserProps {
   userInfo: IUser[];
 }
