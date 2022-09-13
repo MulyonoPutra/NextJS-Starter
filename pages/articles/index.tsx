@@ -1,23 +1,22 @@
 import Layout from '../../components/layout';
 import styles from '../../styles/Articles.module.css'
 
-interface Article {
+interface IArticle {
   id: number;
   title: string;
   body: string;
 }
 
 interface ArticleProps {
-  dataBlog: Article[]
+  data: IArticle[]
 }
 
-export default function Articles(props: Article) {
-  const { dataBlog } = props;
+export default function Articles({data}: ArticleProps) {
   return (
     <Layout pageTitle='Articles'>
       <div>
         {
-          dataBlog.map((article) => {
+          data.map((article) => {
             return (
               <div className={styles.flexWrapper}>
                 <div key={article.id} className={styles.card}>
@@ -36,10 +35,10 @@ export default function Articles(props: Article) {
 // Digunakan untuk fetch data yang dinamis / berubah-ubah
 export async function getServerSideProps() {
   const response = await fetch('https://jsonplaceholder.typicode.com/users/1/posts');
-  const dataBlog = await response.json();
+  const data = await response.json();
   return {
     props: {
-      dataBlog
+      data
     }
   }
 }
